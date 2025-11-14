@@ -39,10 +39,10 @@ El aprendizaje se basa en ejercicios interactivos en línea y explicaciones simp
 
 ### Lección 4: Introducción a POO
 
-- **Descripción:**
+- **Descripción:** Aprende qué son las clases, objetos, atributos, métodos y constructores para crear tus propias estructuras en Java.
 - **Enlace:** [Ver la lección]()
-- **Consejos clave:**
-- **Práctica:**
+- **Consejos clave:** Una clase es un molde o plantilla, un objeto es una copia; usa New para crear objetos y un constructor para inicializarlos.
+- **Práctica:** [Clic para practicar](https://www.jdoodle.com/ga/NLbUp2gspHHe8pd0bKVBHA%3D%3D) 👈 **¡Inicio rápido!**
 
 ### Lección 5: Fundamentos Avanzados de POO
 
