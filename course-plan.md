@@ -19,7 +19,7 @@ El aprendizaje se basa en ejercicios interactivos en línea y explicaciones simp
 ### Lección 1: Primeros Pasos en Java (Integrante 1) — 10–12 minutos
 
 - **Descripción:** En esta lección introductoria se da a enseñar qué es la programación y por qué Java es un lenguaje ideal para principiantes. Conocerás el concepto de variables (cajas para guardar datos) y los tipos de datos básicos: `int` (para números) y `String` (para texto).
-- **Enlace:** [Ver la lección 1]([https://www.youtube.com/watch?v=LINK-LECCION-1](https://youtu.be/-FUS9sfPINw))
+- **Enlace:** [Ver la lección 1](https://youtu.be/-FUS9sfPINw)
 - **Conclusiones clave:**
     - Programar es dar instrucciones claras a la computadora.
     - Java se usa para crear aplicaciones, juegos y sistemas, y es excelente para empezar.
