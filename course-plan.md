@@ -109,23 +109,21 @@ public class Main {
   También se muestra un ejemplo práctico para evaluar condiciones con métodos.
 - **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=gGJ6L_j6ezY)
 - **Consejos clave:**
-
-- Un método es un bloque de código que podemos llamar cuando lo necesitemos.
-- Un método void no devuelve valores; un método con tipo (int, boolean, String…) sí devuelve.
-- Los parámetros permiten enviar información al método.
-- La palabra clave return permite regresar un resultado.
-- Scanner sirve para leer datos escritos por el usuario.
-- Los métodos hacen que el programa sea más ordenado, reutilizable y fácil de mantener.
+    - Un método es un bloque de código que podemos llamar cuando lo necesitemos.
+    - Un método void no devuelve valores; un método con tipo (int, boolean, String…) sí devuelve.
+    - Los parámetros permiten enviar información al método.
+    - La palabra clave return permite regresar un resultado.
+    - Scanner sirve para leer datos escritos por el usuario.
+    - Los métodos hacen que el programa sea más ordenado, reutilizable y fácil de mantener.
 
 - **Código final explicado:** 
 Este es el programa usado en la lección. En él aplicamos:
-
-- Métodos sin parámetros
-- Métodos con parámetros
-- Métodos que retornan valores
-- Entrada de datos con Scanner
-- Uso de return
-- Condiciones utilizando métodos booleanos
+    - Métodos sin parámetros
+    - Métodos con parámetros
+    - Métodos que retornan valores
+    - Entrada de datos con Scanner
+    - Uso de return
+    - Condiciones utilizando métodos booleanos
 
 ```java
 import java.util.Scanner;
