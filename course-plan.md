@@ -103,9 +103,91 @@ public class Main {
 
 ### Lección 3: Reutilizando Código
 
-- **Descripción:** 
+- **Descripción:**
+  En esta lección se introduce el uso de métodos en Java como herramienta para reutilizar código y organizar mejor los programas.
+  Se explica cómo crear métodos simples, métodos con parámetros, métodos que devuelven valores y cómo integrar esto con entrada de datos usando Scanner.
+  También se muestra un ejemplo práctico para evaluar condiciones con métodos.
 - **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=gGJ6L_j6ezY)
-- **Consejos clave:** 
+- **Consejos clave:**
+
+- Un método es un bloque de código que podemos llamar cuando lo necesitemos.
+- Un método void no devuelve valores; un método con tipo (int, boolean, String…) sí devuelve.
+- Los parámetros permiten enviar información al método.
+- La palabra clave return permite regresar un resultado.
+- Scanner sirve para leer datos escritos por el usuario.
+- Los métodos hacen que el programa sea más ordenado, reutilizable y fácil de mantener.
+
+- **Código final explicado:** 
+Este es el programa usado en la lección. En él aplicamos:
+
+- Métodos sin parámetros
+- Métodos con parámetros
+- Métodos que retornan valores
+- Entrada de datos con Scanner
+- Uso de return
+- Condiciones utilizando métodos booleanos
+
+```java
+import java.util.Scanner;
+
+public class Leccion3Metodos {
+
+    public static void main(String[] args) {
+        saludar();
+        
+        //saludo
+        saludarPersona("Marco");
+        saludarPersona("Ana");
+        
+        //entrada del usuario
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Ingresa un número: ");
+        int n1 = sc.nextInt();
+
+        System.out.print("Ingresa otro número: ");
+        int n2 = sc.nextInt();
+        
+        //uso del metodo sumar
+        int suma = sumar(n1,n2);
+        System.out.println("El resultado de la suma es" + suma);
+        
+        sc.close();
+        
+        // uso del metodo espar
+        
+        if(esPar(n1))
+        {
+            System.out.println("El primer numero es par.");
+        }
+        else{
+            System.out.println("El primer numero es impar.");
+        }
+        
+        sc.close();
+        
+    }
+    
+    public static void saludar() {
+        System.out.println("Hola, bienvenido a la lección de métodos.");
+    }
+    
+    public static void saludarPersona(String nombre) {
+        System.out.println("Hola " + nombre + ", ¡bienvenido!");
+    }
+    
+    public static int sumar(int a, int b) {
+        int resultado = a + b;
+        return resultado;
+    }
+    
+    public static boolean esPar(int numero) {
+        return numero % 2 == 0;
+    } 
+}
+
+```
+
 - **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/Wd5Njxe4QjWoTeJsJU1zBg%3D%3D)
 
 ### Lección 4: Introducción a POO
