@@ -110,9 +110,16 @@ public class Main {
 
 ### Lección 4: Introducción a POO
 
-- **Descripción:** Aprende qué son las clases, objetos, atributos, métodos y constructores para crear tus propias estructuras en Java.
+- **Descripción:** Aprende las bases de la Programación Orientada a Objetos en Java: qué son las **clases**, **objetos**, **atributos**, **métodos** y **constructores**, y cómo usarlos para crear tus propias estructuras y modelos en tus programas.
+
 - **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=Zo160ZtZN4E&list=PLfTXn7hHkOOXuwp1E9n_959lazKXyTrsI)
-- **Consejos clave:** Una clase es un molde o plantilla, un objeto es una copia; usa New para crear objetos y un constructor para inicializarlos.
+- **Conclusiones clave:**
+  - Una **clase** es una plantilla.  
+  - Un **objeto** es un ejemplo real creado a partir de esa plantilla.  
+  - Los **atributos** almacenan información del objeto.  
+  - Los **métodos** definen acciones.  
+  - Los **constructores** permiten iniciar objetos con datos.
+    
 - **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/NLbUp2gspHHe8pd0bKVBHA%3D%3D) 👈 **¡Inicio rápido!**
 
 ### Lección 5: Fundamentos Avanzados de POO
