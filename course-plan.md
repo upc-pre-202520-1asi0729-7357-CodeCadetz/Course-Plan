@@ -122,6 +122,65 @@ public class Main {
     
 - **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/NLbUp2gspHHe8pd0bKVBHA%3D%3D) 👈 **¡Inicio rápido!**
 
+- **Código final Explicado**
+  
+  - POO sin constructor:
+
+```java
+// Definición de clase
+class Persona {
+    String nombre; //atributo
+    int edad; //atributo
+    
+    //método
+    void saludar() {
+        System.out.println("Hola, soy " + nombre + " y tengo " + edad + " años ");
+    } 
+}
+
+// Creación de objeto
+public class Main {
+    public static void main(String[] args) {
+        Persona p1 = new Persona();
+        p1.nombre = "Ana";
+        p1.edad = 16;
+        p1.saludar(); 
+    }
+}
+```
+
+ - POO con constructor:
+
+```java
+class Persona {
+    String nombre;
+    int edad;
+    int peso;
+
+    // Constructor
+    Persona(String n, int e, int p) {
+        nombre = n;
+        edad = e;
+        peso=p;
+    }
+
+    void saludar() {
+        System.out.println("Hola, soy " + nombre + "  ,tengo " + edad + " años y peso " + peso + "kg.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Persona p1 = new Persona("Ana", 16, 45);
+        Persona p2 = new Persona("Luis", 17, 57);
+        Persona p3 = new Persona("Jorge", 15, 60);
+        p1.saludar();
+        p2.saludar();
+        p3.saludar();
+    }
+}
+```
+
 ### Lección 5: Fundamentos Avanzados de POO
 
 - **Descripción:** 
