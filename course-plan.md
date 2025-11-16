@@ -263,11 +263,87 @@ public class Main {
 
 ### Lección 5: Fundamentos Avanzados de POO
 
-- **Descripción:** 
+- **Descripción:**
+  En este video aprenderás cómo crear un programa en Java utilizando clases, objetos y encapsulación. Construiremos una clase CuentaBancaria para manejar un saldo y una clase Agenda para gestionar una lista de contactos. Finalmente, veremos cómo instanciar estas clases y ejecutar sus métodos dentro de una clase principal. Es una introducción sencilla y práctica a la programación orientada a objetos en Java.
+  
 - **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=8IqthtFUUSs)
+  
 - **Consejos clave:**
+    - Divide tu código en clases claras
+    - Usa el método main como punto de entrada
+    - Aplica encapsulación
+    - Prueba cada parte por separado
+    - Nombra tus métodos y variables de forma clara
+
 - **Práctica:**
- 
+ ```
+import java.util.ArrayList;
+
+public class Main {
+    
+    public static void main (String[] args){
+        
+        //instanciar objeto de CuentaBancaria
+        CuentaBancaria cuenta = new CuentaBancaria (1000);
+        System.out.println("Saldo inicial" + cuenta.getSaldo());
+        
+        cuenta.setSaldo(1500);
+        System.out.println("Saldo actualizado: " + cuenta.getSaldo());
+        
+        //instanciar objeto de agenda
+        Agenda agenda = new Agenda();
+        agenda.agregarContacto("Pepito");
+        agenda.agregarContacto("Luisa");
+         
+        System.out.println("\nContactos en la agenda: ");
+        agenda.mostrarContactos();
+        
+    }
+}
+
+//Clase de CuentaBancaria
+
+class CuentaBancaria {
+
+    private double saldo;
+
+    public CuentaBancaria(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double cantidad) {
+        if (cantidad >= 0) {
+            this.saldo = cantidad;
+        }
+    }
+}
+//clase Agenda
+
+class Agenda {
+    
+    private ArrayList<String> contactos;
+    
+    public Agenda(){
+        contactos = new ArrayList<>();
+    }
+    
+    public void agregarContacto(String nombre){
+        contactos.add(nombre);
+    }
+    
+    public void mostrarContactos(){
+        for(String contacto: contactos){
+            System.out.println("- " + contacto);
+        }
+    }
+}
+
+
+```
 
 ### Lección 6: Proyecto Final y Consejos
 
