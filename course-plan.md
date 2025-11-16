@@ -9,9 +9,6 @@ El aprendizaje se basa en ejercicios interactivos en línea y explicaciones simp
 **Prerrequisitos:** Ninguno  
 **Herramientas necesarias:** Solo un navegador web (Chrome, Firefox, Safari o Edge)
 
-**📂 Repositorio de código fuente:**  
-[Github](https://github.com/upc-pre-202520-1asi0729-7357-CodeCadetz/Course-Plan/tree/main)
-
 ---
 
 ## 🎬 Secuencia de lecciones
@@ -276,7 +273,7 @@ public class Main {
     - Nombra tus métodos y variables de forma clara
 
 - **Práctica:**
- ```
+ ```java
 import java.util.ArrayList;
 
 public class Main {
@@ -345,17 +342,198 @@ class Agenda {
 
 ```
 
-### Lección 6: Proyecto Final y Consejos
+### Lección 6: Proyecto Final y Consejos (Colaborativo)
 
-- **Descripción:** 
-- **Enlace:** [Ver la lección]()
-- **Consejos clave:**
-- **Práctica:**
+- **Descripción:**  
+  En esta lección final, el equipo desarrolla un **mini–proyecto colaborativo** en Java que integra todos los conceptos aprendidos a lo largo del curso: variables, operadores, estructuras de control, métodos, clases, objetos y encapsulación.  
+  El proyecto consiste en un **Registro de Estudiantes**, donde se puede agregar alumnos, listar la información ingresada y mostrar estadísticas básicas como promedio de notas, cantidad de aprobados y desaprobados.  
+  Cada integrante del equipo implementa una parte diferente del sistema, trabajando en clases independientes y contribuyendo a un programa unificado.
+
+- **Enlace:**  
+  [Ver la lección](https://youtu.be/oLMuUrhr87g)
+
+- **Consejos clave:**  
+  - Trabajar en equipo permite dividir el sistema en **clases claras y bien organizadas**, similar a cómo se construyen programas reales.  
+  - El uso de métodos permite mantener el código ordenado y fácil de comprender.  
+  - La Programación Orientada a Objetos (POO) facilita modelar entidades del mundo real, como la clase `Estudiante`.  
+  - Es importante validar datos, manejar opciones inválidas y asegurarse de que el programa no falle cuando el usuario ingresa valores inesperados.  
+  - Un proyecto pequeño pero bien estructurado prepara a los estudiantes para desarrollos más avanzados en el futuro.
+
+- **Práctica:**  
+  En esta práctica, los estudiantes pueden:
+  - Completar o extender el proyecto agregando nuevas funcionalidades, como:
+    - Buscar un estudiante por nombre.  
+    - Modificar la nota de un estudiante.  
+    - Eliminar estudiantes de la lista.  
+    - Agregar más estadísticas (máxima nota, mínima nota, etc.).  
+  - Modificar el menú principal para incluir nuevas opciones.  
+  - Cambiar el límite de estudiantes o reemplazar el arreglo por una lista dinámica.  
+  - Adaptar el programa para que funcione con entrada desde archivo (opcional).  
+  - Personalizar mensajes y mejorar la interfaz de consola.
  
 
 ## 📁 Recursos adicionales
 
 - **Código fuente completo:**
+```java
+class Menu {
+
+    private Scanner sc = new Scanner(System.in);
+
+    public int mostrarMenu() {
+        System.out.println("\n=== SISTEMA DE REGISTRO ===");
+        System.out.println("1. Agregar estudiante");
+        System.out.println("2. Listar estudiantes");
+        System.out.println("3. Ver estadísticas");
+        System.out.println("4. Salir");
+        System.out.print("Elige una opción: ");
+
+        int opcion = sc.nextInt();
+        sc.nextLine(); // limpiar salto
+
+        return opcion;
+    }
+
+    public void mostrarOpcionInvalida() {
+        System.out.println("Opción no válida. Intenta nuevamente.");
+    }
+}
+
+class Estudiante {
+
+    private String nombre;
+    private int nota;
+
+    public Estudiante(String nombre, int nota) {
+        this.nombre = nombre;
+        this.nota = nota;
+    }
+
+    public String getNombre() { return nombre; }
+    public int getNota() { return nota; }
+
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public void setNota(int nota) { this.nota = nota; }
+
+    public void imprimir() {
+        System.out.println("Nombre: " + nombre + " | Nota: " + nota);
+    }
+}
+
+class RegistroEstudiantes {
+
+    private Estudiante[] lista = new Estudiante[50];
+    private int cantidad = 0;
+    private Scanner sc = new Scanner(System.in);
+
+    public void agregar() {
+        if (cantidad >= lista.length) {
+            System.out.println("No es posible agregar más estudiantes.");
+            return;
+        }
+
+        System.out.print("Nombre del estudiante: ");
+        String nombre = sc.nextLine();
+
+        System.out.print("Nota (0–20): ");
+        int nota = sc.nextInt();
+        sc.nextLine(); 
+        lista[cantidad] = new Estudiante(nombre, nota);
+        cantidad++;
+
+        System.out.println("Estudiante registrado correctamente.");
+    }
+
+    public void listar() {
+        if (cantidad == 0) {
+            System.out.println("No hay estudiantes aún.");
+            return;
+        }
+
+        System.out.println("\n--- LISTA DE ESTUDIANTES ---");
+        for (int i = 0; i < cantidad; i++) {
+            lista[i].imprimir();
+        }
+    }
+
+    public Estudiante[] getLista() { return lista; }
+    public int getCantidad() { return cantidad; }
+}
+
+class Estadisticas {
+
+    public void mostrarEstadisticas(Estudiante[] lista, int cantidad) {
+
+        if (cantidad == 0) {
+            System.out.println("No hay datos para calcular estadísticas.");
+            return;
+        }
+
+        int suma = 0;
+        int aprobados = 0;
+        int desaprobados = 0;
+
+        for (int i = 0; i < cantidad; i++) {
+            int nota = lista[i].getNota();
+            suma += nota;
+
+            if (nota >= 11) {
+                aprobados++;
+            } else {
+                desaprobados++;
+            }
+        }
+
+        double promedio = (double) suma / cantidad;
+
+        System.out.println("\n--- ESTADÍSTICAS ---");
+        System.out.println("Estudiantes: " + cantidad);
+        System.out.println("Promedio: " + promedio);
+        System.out.println("Aprobados: " + aprobados);
+        System.out.println("Desaprobados: " + desaprobados);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Menu menu = new Menu();
+        RegistroEstudiantes registro = new RegistroEstudiantes();
+        Estadisticas estadisticas = new Estadisticas();
+
+        int opcion;
+
+        do {
+            opcion = menu.mostrarMenu();
+
+            switch (opcion) {
+                case 1:
+                    registro.agregar();
+                    break;
+
+                case 2:
+                    registro.listar();
+                    break;
+
+                case 3:
+                    estadisticas.mostrarEstadisticas(
+                        registro.getLista(),
+                        registro.getCantidad()
+                    );
+                    break;
+
+                case 4:
+                    System.out.println("¡Gracias por usar el sistema!");
+                    break;
+
+                default:
+                    menu.mostrarOpcionInvalida();
+            }
+
+        } while (opcion != 4);
+    }
+}
+```
 
 
 ## 👥 Elaboración
