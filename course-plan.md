@@ -33,7 +33,7 @@ El aprendizaje se basa en ejercicios interactivos en línea y explicaciones simp
   Introduce los **operadores y expresiones** en Java (sumas, restas, comparaciones) y cómo usarlos para tomar decisiones y repetir acciones simples. Se trabaja con los tipos de dato `int` y `boolean`, y se muestran ejemplos con `if`, `while` y `for`.
 
 - **Enlace**:  
-  [Ver la lección 2](https://www.youtube.com/watch?v=LINK-LECCION-2)
+  [Ver la lección 2](https://www.youtube.com/watch?v=GU94k8-TygQ)
 
 - **Conclusiones clave**:
   - Un `int` sirve para guardar **números enteros**; un `boolean` guarda `true` o `false`.
@@ -99,24 +99,26 @@ public class Main {
     }
 }
 ```
+- **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/ceCcGkGN9P3NPiAk436BUg%3D%3D)
+
 ### Lección 3: Reutilizando Código
 
 - **Descripción:** 
-- **Enlace:** [Ver la lección]()
+- **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=gGJ6L_j6ezY)
 - **Consejos clave:** 
-- **Práctica:**
+- **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/Wd5Njxe4QjWoTeJsJU1zBg%3D%3D)
 
 ### Lección 4: Introducción a POO
 
 - **Descripción:** Aprende qué son las clases, objetos, atributos, métodos y constructores para crear tus propias estructuras en Java.
-- **Enlace:** [Ver la lección]()
+- **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=Zo160ZtZN4E&list=PLfTXn7hHkOOXuwp1E9n_959lazKXyTrsI)
 - **Consejos clave:** Una clase es un molde o plantilla, un objeto es una copia; usa New para crear objetos y un constructor para inicializarlos.
-- **Práctica:** [Clic para practicar](https://www.jdoodle.com/ga/NLbUp2gspHHe8pd0bKVBHA%3D%3D) 👈 **¡Inicio rápido!**
+- **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/NLbUp2gspHHe8pd0bKVBHA%3D%3D) 👈 **¡Inicio rápido!**
 
 ### Lección 5: Fundamentos Avanzados de POO
 
 - **Descripción:** 
-- **Enlace:** [Ver la lección]()
+- **Enlace:** [Ver la lección](https://www.youtube.com/watch?v=8IqthtFUUSs)
 - **Consejos clave:**
 - **Práctica:**
  
