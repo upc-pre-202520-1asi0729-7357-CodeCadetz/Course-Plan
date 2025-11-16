@@ -101,7 +101,7 @@ public class Main {
 ```
 - **Práctica:** [Click para practicar](https://www.jdoodle.com/ga/ceCcGkGN9P3NPiAk436BUg%3D%3D)
 
-### Lección 3: Reutilizando Código
+### Lección 3: Reutilizando Código (Integrante 3) — 9-10 minutos
 
 - **Descripción:**
   En esta lección se introduce el uso de métodos en Java como herramienta para reutilizar código y organizar mejor los programas.
